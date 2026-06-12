@@ -1,0 +1,27 @@
+<nav class="navbar">
+
+    <div class="nav-logo">
+        🍽 RecipeHub
+    </div>
+
+    <div class="nav-links">
+        <a href="/recipes">Recipes</a>
+        <a href="/my-recipes">My Recipes</a>
+        <a href="/recipe/add">Add Recipe</a>
+    </div>
+
+    <div class="nav-user">
+        <div class="user-avatar">
+            <%= currentUser ? currentUser.username.charAt(0).toUpperCase() : "G" %>
+        </div>
+
+        <span>
+            <%= currentUser ? currentUser.username : "Guest" %>
+        </span>
+
+        <a href="/logout" class="logout-btn">
+            Logout
+        </a>
+    </div>
+
+</nav>

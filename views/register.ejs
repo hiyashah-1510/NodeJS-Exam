@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Recipe Hub</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="register-wrapper">
+
+    <div class="register-left">
+
+        <div class="auth-card">
+
+            <h1>🍽 Recipe Hub</h1>
+            <p>Create your culinary account</p>
+
+            <form action="/register" method="POST">
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    required
+                >
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <select name="role">
+
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+
+                </select>
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="auth-links">
+
+                <a href="/login">
+                    Already have an account?
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="register-right">
+
+        <div class="overlay">
+
+            <h1>Join Recipe Hub</h1>
+
+            <p>
+                Share your favorite dishes, discover new recipes,
+                and connect with food lovers around the world.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

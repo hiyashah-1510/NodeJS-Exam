@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes</title>
+</head>
+
+<body>
+
+<%- include("partials/navbar") %>
+
+<div class="recipe-grid">
+
+    <% recipes.forEach(recipe => { %>
+
+        <div class="recipe-card">
+
+            <img
+                src="/uploads/<%= recipe.image %>"
+                alt="<%= recipe.title %>"
+            >
+
+            <div class="recipe-content">
+
+                <h3>
+                    <%= recipe.title %>
+                </h3>
+
+                <p class="author">
+                    👨‍🍳 <%= recipe.createdBy.username %>
+                </p>
+
+                <p class="ingredients">
+                    <%= recipe.ingredients.substring(0,100) %>...
+                </p>
+
+                <div class="recipe-actions">
+
+                    <a
+                        href="/recipe/<%= recipe._id %>"
+                        class="view-btn"
+                    >
+                        View
+                    </a>
+
+                    <% if(
+                        currentUser &&
+                        (
+                            currentUser.id === recipe.createdBy._id.toString()
+                            ||
+                            currentUser.role === "admin"
+                        )
+                    ){ %>
+
+                        <a
+                            href="/recipe/edit/<%= recipe._id %>"
+                            class="edit-btn"
+                        >
+                            Edit
+                        </a>
+
+                        <a
+                            href="/recipe/delete/<%= recipe._id %>"
+                            class="delete-btn"
+                            onclick="return confirm('Delete this recipe?')"
+                        >
+                            Delete
+                        </a>
+
+                    <% } %>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    <% }) %>
+
+</div>
+
+</body>
+
+</html>

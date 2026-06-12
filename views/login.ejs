@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Hub Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+
+    <div class="login-left">
+
+        <div class="auth-card">
+
+            <h1>🍽 Recipe Hub</h1>
+            <p>Discover & Share Amazing Recipes</p>
+
+            <form action="/login" method="POST">
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="auth-links">
+
+                <a href="/forgot-password">
+                    Forgot Password?
+                </a>
+
+                <br><br>
+
+                <a href="/register">
+                    Create Account
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="login-right">
+
+        <div class="overlay">
+
+            <h1>Welcome Back</h1>
+
+            <p>
+                Share recipes, explore culinary ideas,
+                and connect with food lovers.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
